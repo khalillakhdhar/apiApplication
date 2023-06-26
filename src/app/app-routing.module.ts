@@ -5,7 +5,7 @@ import { RappelDetailsComponent } from './rappel-details/rappel-details.componen
 
 const routes: Routes = [
 {
-  path: '',redirectTo:"rappel"
+  path: '',redirectTo:'rappel',pathMatch:'full'
 },
 {
   path:'rappel',component:RappelsComponent

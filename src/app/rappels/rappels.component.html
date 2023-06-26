@@ -1,0 +1,58 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+
+    </div>
+    <div class="col">
+      <form (submit)="addOne()">
+        <div class="mb-3">
+          <label for="elt" class="form-label">Titre</label>
+          <input type="text" class="form-control" name="titre" [(ngModel)]="rappel.titre"  id="elt" >
+        </div>
+        <div class="mb-3">
+          <label for="elt" class="form-label">Description</label>
+          <textarea class="form-control" name="des" [(ngModel)]="rappel.titre"  id="des" >
+            </textarea>
+        </div>
+        <div class="mb-3">
+          <label for="elt" class="form-label"> début</label>
+          <input type="datetime-local" class="form-control" name="debut" [(ngModel)]="rappel.date"  id="elt" >
+        </div>
+        <div class="mb-3">
+          <label for="elt" class="form-label"> fin</label>
+          <input type="datetime-local" class="form-control" name="fin" [(ngModel)]="rappel.fin"  id="elt" >
+        </div>
+        <div class="mb-3">
+          <label for="elt" class="form-label"> Lieu</label>
+          <input type="text" class="form-control" name="lieu" [(ngModel)]="rappel.lieu"  id="lieu" >
+        </div>
+        <div class="mb-3">
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+</div>
+<table class="table table-hover table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>titre</th>
+      <th>début</th>
+      <th>Action</th>
+
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let rp of rappelList;let i=index">
+      <td>{{rp.titre}}</td>
+      <td>{{rp.date}}</td>
+      <td><a routerLink="/{{i}}">voir détailles</a></td>
+
+    </tr>
+  </tbody>
+</table>

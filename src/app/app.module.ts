@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { RappelsComponent } from './rappels/rappels.component';
 import { RappelDetailsComponent } from './rappel-details/rappel-details.component';
 import { FormsModule } from '@angular/forms';
+import { MatiereComponent } from './matiere/matiere.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RappelsComponent,
-    RappelDetailsComponent
+    RappelDetailsComponent,
+    MatiereComponent
   ],
   imports: [
     BrowserModule,
